@@ -1,0 +1,84 @@
+@import 'src/styles/variables';
+
+.container {
+    display: flex;
+    align-items: start;
+    box-sizing: border-box;
+    width: 64%;
+    column-gap: 16px;
+    margin: 0 auto;
+    padding-top: 30px;
+    height: 100%;
+}
+
+.sidebarContainer {
+    width: 45%;
+    max-width: 220px;
+    background-color: white;
+    padding: 16px 16px 22px;
+    border-radius: $border--radius--1;
+
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
+}
+
+.container .verticalDivider {
+    height: 258px;
+    border-inline-start: 1px solid $border--light--1;
+}
+
+.sidebarContainer .header {
+    all: unset;
+    font-size: 24px;
+}
+
+.sidebarContainer .divider {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.sidebarContainer .controls {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    overflow: hidden;
+
+    :global {
+        .MuiButton-root {
+            text-transform: none;
+            background-color: $primary--1;
+            color: $text--on--light--3;
+        }
+    }
+}
+
+.noOptions {
+    color: rgba(0, 0, 0, 0.6);
+    padding: 14px 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    user-select: none;
+}
+
+.mainContentContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContentContainer .segmentLabel {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 1400px) {
+    .container {
+        width: 54%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        width: 95%;
+    }
+}

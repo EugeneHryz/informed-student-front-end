@@ -1,0 +1,56 @@
+@import 'src/styles/variables';
+
+.container {
+    box-sizing: border-box;
+    padding: 12px;
+    width: 100%;
+    background-color: $bg--light--2;
+    border-radius: $border--radius--1;
+    border: 1px solid $border--light--1;
+
+    word-break: break-all;
+}
+
+.container .text {
+    color: $text--on--light--4;
+    font-size: 18px;
+}
+
+.container .commentsLabel {
+    color: $text--on--light--4;
+    font-size: 14px;
+}
+
+.addCommentSection {
+    display: flex;
+    padding: 2px;
+    border: 1px solid $border--light--1;
+    border-radius: $border--radius--1;
+}
+
+.addCommentSection .textArea {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    color: $text--on--light--4;
+    font-size: 14px;
+    resize: none;
+    flex: 1 0 80%;
+    font-family: inherit;
+
+    &::placeholder {
+        color: $text--on--light--5;
+    }
+}
+
+.comment {
+    padding-bottom: 10px;
+    font-size: 14px;
+
+    .createdAt {
+        margin-top: 8px;
+        font-size: 12px;
+        color: $text--on--light--5;
+    }
+}
+

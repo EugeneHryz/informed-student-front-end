@@ -1,0 +1,82 @@
+@import 'src/styles/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
+.container .posts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.posts .addPost {
+
+  padding: 12px;
+  background-color: $bg--light--2;
+  border-radius: $border--radius--1;
+  border: 1px solid $border--light--1;
+
+  :global {
+    .MuiButton-root {
+      height: 40px;
+      text-transform: none;
+      background-color: $secondary--1;
+      color: $text--on--dark--1;
+
+      &:hover {
+        background-color: $secondary--hover--1;
+      }
+    }
+    .MuiButton-root.Mui-disabled {
+      pointer-events: none;
+      cursor: default;
+      color: rgba(14, 14, 14, 0.3);
+      box-shadow: none;
+      background-color: rgba(15, 34, 161, 0.2);
+    }
+  }
+}
+
+.container .pagination {
+  margin: 16px 0;
+  align-self: center;
+}
+
+.addPost .textArea {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  color: $text--on--light--4;
+  font-size: 18px;
+  resize: none;
+  width: 100%;
+  font-family: inherit;
+
+  &::placeholder {
+    color: $text--on--light--5;
+  }
+}
+
+.addPost .controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls .buttons {
+  display: flex;
+  column-gap: 4px;
+}
+
+.controls .fileName {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.controls .fileTooLarge {
+  color: $error--1;
+}
